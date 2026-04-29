@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simulador de Procesos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <h1>Simulador de Procesos</h1>
+    <h2 id="clock">Tiempo: 0</h2>
+
+    <div class="controls">
+
+    <label>Algoritmo:</label>
+
+<label>Algoritmo:</label>
+
+<select id="algorithm">
+    <option value="fcfs">FCFS</option>
+    <option value="rr">Round Robin</option>
+    <option value="sjf">SJF</option>
+</select>
+
+<label>Quantum:</label>
+<input type="number" id="quantum" value="2" min="1">
+
+    <button onclick="startSimulation()">    
+        Iniciar Simulación
+    <button onclick="resetSimulation()">
+    Reiniciar
+</button>
+    </button>
+
+</div>
+
+    <div class="board">
+
+        <div class="section">
+            <h2>CPU</h2>
+            <div id="cpu"></div>
+        </div>
+
+        <div class="section">
+            <h2>Ready Queue</h2>
+            <div id="ready"></div>
+        </div>
+
+        <div class="section">
+            <h2>Waiting Queue</h2>
+            <div id="waiting"></div>
+        </div>
+
+        <div class="section">
+            <h2>Finished</h2>
+            <div id="finished"></div>
+        </div>
+
+    </div>
+    <div class="gantt-container">
+
+    <h2>Timeline CPU (Gantt)</h2>
+
+    <div id="gantt"></div>
+
+    <div class="metrics">
+
+    <h2>Métricas</h2>
+
+    <div id="metrics-box">
+
+        <p>Waiting Time: <span id="waiting-time">0</span></p>
+
+        <p>Turnaround Time: <span id="turnaround-time">0</span></p>
+
+        <p>CPU Utilization: <span id="cpu-utilization">0</span>%</p>
+
+    </div>
+
+</div>
+
+</div>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+
+</body>
+</html>
