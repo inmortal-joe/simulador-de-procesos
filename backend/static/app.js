@@ -15,10 +15,10 @@ let totalTurnaround = 0;
 let completedProcesses = 0;
 
 let processes = [
-    { id: "P1", burst: 4 },
-    { id: "P2", burst: 2 },
-    { id: "P3", burst: 6 },
-    { id: "P4", burst: 3 }
+    { id: "Proceso 1", burst: 4 },
+    { id: "Proceso 2", burst: 2 },
+    { id: "Proceso 3", burst: 6 },
+    { id: "Proceso 4", burst: 3 }
 ];
 
 let originalProcesses = [];
